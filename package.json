@@ -1,0 +1,39 @@
+{
+	"name": "webpack-starter-frontend",
+	"version": "1.0.0",
+	"description": "frontend template",
+	"main": "src/index.js",
+	"scripts": {
+		"dev": "webpack --mode development",
+		"build-only": "webpack --mode production",
+		"build": "del-cli dist && webpack --mode production && html dist/*.html --indent-size 2",
+		"watch": "webpack --mode development --watch",
+		"start": "webpack-dev-server --mode development --open",
+		"beautify": "html dist/*.html --indent-size 2",
+		"clear": "del-cli dist"
+	},
+	"dependencies": {
+		"jquery": "^3.3.1"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.1.0",
+		"@babel/plugin-proposal-class-properties": "^7.1.0",
+		"@babel/preset-env": "^7.1.0",
+		"babel-loader": "^8.0.2",
+		"copy-webpack-plugin": "^4.5.2",
+		"css-loader": "^1.0.0",
+		"cssnano": "^4.1.0",
+		"del-cli": "^1.1.0",
+		"html-cli": "^1.0.0",
+		"html-webpack-plugin": "^3.2.0",
+		"mini-css-extract-plugin": "^0.4.3",
+		"node-sass": "^4.9.3",
+		"postcss-loader": "^3.0.0",
+		"pug-html-loader": "^1.1.5",
+		"raw-loader": "^0.5.1",
+		"sass-loader": "^7.1.0",
+		"webpack": "^4.19.1",
+		"webpack-cli": "^3.1.0",
+		"webpack-dev-server": "^3.1.8"
+	}
+}
